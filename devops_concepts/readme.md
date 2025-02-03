@@ -41,18 +41,20 @@ Note:
 
 - DynamoDB accepts a maximum of 25 items per batch write operation.
 - Ensure that the data types match DynamoDB requirements (e.g., S for strings, N for numbers).
-##Step 2: Upload Items Using AWS CLI
+## Step 2: Upload Items Using AWS CLI
 Use the following command to upload your items into the DynamoDB table:
 
 
-```json aws dynamodb batch-write-item --request-items file://data.json ```
+```json 
+aws dynamodb batch-write-item --request-items file://data.json ```
 
 This command tells the AWS CLI to use the JSON file data.json to perform a batch write operation on your DynamoDB table.
 
 ##Step 3: Verify the Upload
 To confirm that the items have been successfully uploaded, run the following command:
 
-```bash aws dynamodb scan --table-name YourTableName ```
+```bash 
+aws dynamodb scan --table-name YourTableName ```
 This command will scan the table and display the items currently stored in it.
 
 ##Step 4: (Optional) Using a Python Script for Large Datasets
