@@ -36,6 +36,7 @@ Create a JSON file (e.g., `data.json`) with the following structure. Make sure t
     // You can add up to 25 items per batch.
   ]
 }
+```
 Note:
 
 DynamoDB accepts a maximum of 25 items per batch write operation.
