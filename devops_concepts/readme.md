@@ -46,18 +46,20 @@ Use the following command to upload your items into the DynamoDB table:
 
 
 ```json 
-aws dynamodb batch-write-item --request-items file://data.json ```
+aws dynamodb batch-write-item --request-items file://data.json
+```
 
 This command tells the AWS CLI to use the JSON file data.json to perform a batch write operation on your DynamoDB table.
 
-##Step 3: Verify the Upload
+## Step 3: Verify the Upload
 To confirm that the items have been successfully uploaded, run the following command:
 
 ```bash 
-aws dynamodb scan --table-name YourTableName ```
+aws dynamodb scan --table-name YourTableName
+ ```
 This command will scan the table and display the items currently stored in it.
 
-##Step 4: (Optional) Using a Python Script for Large Datasets
+## Step 4: (Optional) Using a Python Script for Large Datasets
 If you have more than 25 items or want to implement error handling (e.g., retrying unprocessed items), you can use the following Python script with Boto3:
 
 ```python
@@ -84,9 +86,9 @@ for i in range(0, len(items), 25):
     if unprocessed:
         print("Unprocessed items detected. Consider implementing a retry mechanism.")
 ```
-Note: This script reads the JSON file, processes the items in batches of 25, and checks for any unprocessed items that may need to be retried.
+### Note: This script reads the JSON file, processes the items in batches of 25, and checks for any unprocessed items that may need to be retried.
 
-##Summary
+## Summary
 - Prepare your JSON file with the correct structure and data types.
 - Upload items using the AWS CLI command: `aws dynamodb batch-write-item --request-items file://data.json`
 - Verify your upload by scanning the DynamoDB table.
