@@ -45,7 +45,7 @@ Note:
 Use the following command to upload your items into the DynamoDB table:
 
 
-```json 
+```bash 
 aws dynamodb batch-write-item --request-items file://data.json
 ```
 
