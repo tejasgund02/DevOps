@@ -45,7 +45,7 @@ Note:
 Use the following command to upload your items into the DynamoDB table:
 
 
-```bash aws dynamodb batch-write-item --request-items file://data.json ```
+```json aws dynamodb batch-write-item --request-items file://data.json ```
 
 This command tells the AWS CLI to use the JSON file data.json to perform a batch write operation on your DynamoDB table.
 
@@ -85,10 +85,10 @@ for i in range(0, len(items), 25):
 Note: This script reads the JSON file, processes the items in batches of 25, and checks for any unprocessed items that may need to be retried.
 
 ##Summary
--Prepare your JSON file with the correct structure and data types.
--Upload items using the AWS CLI command: `aws dynamodb batch-write-item --request-items file://data.json`
--Verify your upload by scanning the DynamoDB table.
--Use a Python script for handling large datasets or for advanced error handling.
+- Prepare your JSON file with the correct structure and data types.
+- Upload items using the AWS CLI command: `aws dynamodb batch-write-item --request-items file://data.json`
+- Verify your upload by scanning the DynamoDB table.
+- Use a Python script for handling large datasets or for advanced error handling.
 Happy coding!
 
 
