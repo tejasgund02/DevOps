@@ -1,0 +1,9 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Minimal CloudFormation Template to launch an EC2 instance.
+
+Resources:
+  EC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      ImageId: ami-04b4f1a9cf54c11d0  # Change this to your region-specific AMI ID
